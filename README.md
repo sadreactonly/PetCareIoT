@@ -25,3 +25,6 @@ The project was completed using the following technologies:
 - Client 2 (ESP8266 and Arduino) - responds to Client 1 requests and periodically sends sensors reading.
 
 ![Communication flow](https://github.com/sadreactonly/PetCareIoT/blob/master/PetCareIoT.Images/communication_flow.jpg?raw=true)
+
+## Android app
+![Main screen](https://github.com/sadreactonly/PetCareIoT/blob/master/PetCareIoT.Images/mainscreen.png?raw=true)
