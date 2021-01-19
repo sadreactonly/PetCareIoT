@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">        
+    <TextView
+            android:text="Communication mode"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:textAlignment="center"            
+            android:layout_height="wrap_content"
+            android:padding="@dimen/abc_control_padding_material"
+            android:background="@color/colorPrimary"
+            android:id="@+id/textView1" />
+    <LinearLayout
+        android:layout_below="@id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="Local"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/textView2" />
+        <android.support.v7.widget.SwitchCompat
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/SelectionSwitch" 
+            android:id="@+id/switch1" />
+                <TextView
+            android:layout_weight="1"
+            android:text="ThingSpeak"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/textView3" />
+    </LinearLayout>
+</RelativeLayout>

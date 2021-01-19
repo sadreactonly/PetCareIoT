@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+     
+    <RelativeLayout
+        android:minWidth="@dimen/minWidth"
+        android:minHeight="@dimen/minHeight"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_title_height"
+        android:background="@color/colorPrimary"
+        android:id="@+id/widgetTitleLayout">
+            <TextView
+            android:text="@string/feeding_configuration"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1" />
+         
+        </RelativeLayout>
+     
+    <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_toLeftOf="@+id/fakeView"
+            android:layout_below="@+id/widgetTitleLayout"
+            android:padding="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+  
+            <TextView
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textViewFeedingTime" />
+
+            <Button
+                    android:text="@string/set_time"
+                    android:layout_below="@+id/textViewFeedingTime"
+                    android:layout_centerHorizontal="true"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/minWidth"
+                    android:minHeight="@dimen/minHeight"
+                    android:id="@+id/feedTimeButton" />
+            </RelativeLayout>
+      
+    <View
+            android:layout_below="@+id/widgetTitleLayout"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/fakeView"
+            android:layout_width="1dp"
+            android:layout_height="1dp"/>
+ 
+    <RelativeLayout
+        android:id="@+id/switchLayout"
+        android:layout_below="@+id/widgetTitleLayout"
+        android:layout_toRightOf="@+id/fakeView"
+        android:layout_width="match_parent"
+        android:padding="25dp"
+        android:layout_height="wrap_content">
+            <Switch
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switchFeeding" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/switchFeeding"
+                android:layout_centerHorizontal="true"
+                android:text="Set auto feeding"
+                android:layout_height="wrap_content" />
+    </RelativeLayout>
+  
+    <Button
+            android:layout_below="@+id/switchLayout"
+            android:layout_centerHorizontal="true"
+            android:text="Save"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSaveFeedingConfig" />
+</RelativeLayout>

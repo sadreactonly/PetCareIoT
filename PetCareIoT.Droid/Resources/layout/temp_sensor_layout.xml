@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+            <TextView
+            android:text="@string/water_pump_widget_title"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:textAlignment="center"            
+            android:layout_height="wrap_content"
+            android:padding="@dimen/abc_control_padding_material"
+            android:background="@color/colorPrimary"
+            android:id="@+id/textView1" />
+    <LinearLayout
+         android:id="@+id/gauges"
+        android:layout_below="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include 
+            layout="@layout/gauges_layout" />
+        </LinearLayout>
+    <RelativeLayout
+            android:layout_below="@+id/gauges"
+            android:layout_centerHorizontal="true"
+            android:clipChildren="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+              <ProgressBar
+                android:elevation="@dimen/progressBar_elevation"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/abc_hint_foreground_material_dark"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBarDHT" />
+            <Button
+                android:text="@string/get"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonGetDht" />      
+        </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+      
+    <android.support.design.card.MaterialCardView
+		android:minWidth="@dimen/minWidth"
+        android:minHeight="@dimen/minHeight"
+	    android:layout_margin="@dimen/widget_margin"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/config_widget_height"
+        android:id="@+id/materialCardView1">
+        
+            <include layout="@layout/config_feeding_widget" />
+    
+       </android.support.design.card.MaterialCardView>
+    
+       
+    <android.support.design.card.MaterialCardView
+		android:minWidth="@dimen/minWidth"
+        android:minHeight="@dimen/minHeight"
+	    android:layout_margin="@dimen/widget_margin"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/config_widget_height"
+        android:id="@+id/materialCardView2">
+        
+            <include layout="@layout/config_watering_widget" />
+    
+    </android.support.design.card.MaterialCardView>
+  
+    
+   
+    <Button
+        android:visibility="invisible"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/save_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+    
+</LinearLayout>

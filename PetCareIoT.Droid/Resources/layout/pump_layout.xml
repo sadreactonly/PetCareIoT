@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+            <TextView
+            android:text="@string/water_pump_widget_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:textAlignment="center"            
+            android:layout_height="wrap_content"
+            android:padding="@dimen/abc_control_padding_material"
+            android:background="@color/colorPrimary"
+            android:id="@+id/textView1" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_below="@+id/textView1"
+	    android:id="@+id/animation_view"
+        android:layout_centerHorizontal="true"
+	    android:layout_width="150dp"
+	    android:layout_height="150dp"
+	    app:lottie_fileName="happy_cat.json"
+	    app:lottie_loop="true"
+	    app:lottie_autoPlay="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/animation_view"
+        android:orientation="horizontal">
+      
+       <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+             <ProgressBar
+                android:elevation="@dimen/progressBar_elevation"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/abc_hint_foreground_material_dark"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBarFeed" />
+            <Button
+                android:text="@string/startFeeder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonFeed" />
+           
+        </RelativeLayout>
+        <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+             <ProgressBar
+                android:elevation="@dimen/progressBar_elevation"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/abc_hint_foreground_material_dark"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBarWater" />
+        <Button  
+            android:text="@string/startPump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPump" />
+        </RelativeLayout>
+        
+    </LinearLayout>
+</RelativeLayout>
