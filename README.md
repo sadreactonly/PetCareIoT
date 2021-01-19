@@ -23,3 +23,5 @@ The project was completed using the following technologies:
 - Middleware (Asp.Net Core app with websockets) - routes messages between clients in real-time and stores those messages in database.
 
 - Client 2 (ESP8266 and Arduino) - responds to Client 1 requests and periodically sends sensors reading.
+
+![Communication flow](https://github.com/sadreactonly/PetCareIoT/blob/master/PetCareIoT.Images/communication_flow.jpg?raw=true)
